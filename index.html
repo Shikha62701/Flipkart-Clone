@@ -1,0 +1,287 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">Flipkart</div>
+
+        <input
+            type="text"
+            class="search-box"
+            placeholder="Search for products, brands and more"
+        >
+
+        <button class="login-btn" onclick="openLogin()">
+            Login
+        </button>
+
+        <div class="cart">
+            🛒 Cart
+        </div>
+
+    </nav>
+
+
+    <!-- Categories -->
+    <section class="categories">
+
+        <div>📱 Mobiles</div>
+        <div>👕 Fashion</div>
+        <div>💻 Electronics</div>
+        <div>🏠 Home</div>
+        <div>📺 Appliances</div>
+        <div>✈️ Travel</div>
+        <div>🛒 Grocery</div>
+
+    </section>
+
+
+    <!-- Banner -->
+    <section class="banner">
+
+        <h1>Welcome to Flipkart Clone</h1>
+
+        <p>Big Shopping Days • Best Deals</p>
+
+        <button>Shop Now</button>
+
+    </section>
+
+
+    <!-- Products -->
+    <section class="products">
+
+        <h2>Best Deals</h2>
+
+        <div class="product-container">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+
+                <img
+                    src="https://via.placeholder.com/200"
+                    alt="Smartphone"
+                >
+
+                <h3>Smartphone</h3>
+
+                <p>₹14,999</p>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+
+            <!-- Product 2 -->
+            <div class="product-card">
+
+                <img
+                    src="https://via.placeholder.com/200"
+                    alt="Laptop"
+                >
+
+                <h3>Laptop</h3>
+
+                <p>₹49,999</p>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+
+            <!-- Product 3 -->
+            <div class="product-card">
+
+                <img
+                    src="https://via.placeholder.com/200"
+                    alt="Headphones"
+                >
+
+                <h3>Headphones</h3>
+
+                <p>₹1,499</p>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+
+            <!-- Product 4 -->
+            <div class="product-card">
+
+                <img
+                    src="https://via.placeholder.com/200"
+                    alt="Smart Watch"
+                >
+
+                <h3>Smart Watch</h3>
+
+                <p>₹2,999</p>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+
+            <!-- Product 5 -->
+            <div class="product-card">
+
+                <img
+                    src="https://via.placeholder.com/200"
+                    alt="Running Shoes"
+                >
+
+                <h3>Running Shoes</h3>
+
+                <p>₹1,999</p>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+
+            <!-- Product 6 -->
+            <div class="product-card">
+
+                <img
+                    src="https://via.placeholder.com/200"
+                    alt="Backpack"
+                >
+
+                <h3>Backpack</h3>
+
+                <p>₹899</p>
+
+                <button>Add to Cart</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Cart -->
+    <section class="cart-section">
+
+        <h2>Your Cart</h2>
+
+        <div id="cart-items">
+            <p>Your cart is empty.</p>
+        </div>
+
+        <h3 id="cart-total">
+            Total: ₹0
+        </h3>
+
+        <button id="checkout-btn">
+            Checkout
+        </button>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div>
+
+            <h3>About</h3>
+
+            <p>
+                Flipkart Clone is a beginner
+                e-commerce project.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <p>Home</p>
+            <p>Products</p>
+            <p>Cart</p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <p>Email: support@example.com</p>
+
+            <p>Phone: +91 9876543210</p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+
+        <p>
+            © 2026 Flipkart Clone | Created by Shikha
+        </p>
+
+    </div>
+
+
+    <!-- Login Popup -->
+    <div id="login-popup" class="login-popup">
+
+        <div class="login-box">
+
+            <span
+                class="close"
+                onclick="closeLogin()"
+            >
+                &times;
+            </span>
+
+            <h2>Login</h2>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter Email"
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter Password"
+            >
+
+            <button onclick="login()">
+                Login
+            </button>
+
+            <p id="login-message"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
