@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile</title>
+
+    <link rel="stylesheet" href="./profile.css?v=2">
+</head>
+
+<body>
+
+    <div class="profile-container">
+
+        <div class="profile-header">
+            <div class="profile-icon">👤</div>
+
+            <h1>My Profile</h1>
+
+            <p id="welcome-user">Welcome!</p>
+        </div>
+
+        <div class="profile-card">
+
+            <h2>Personal Information</h2>
+
+            <p>
+                <strong>Name:</strong>
+                <span id="profile-name">-</span>
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                <span id="profile-email">-</span>
+            </p>
+
+        </div>
+
+        <div class="profile-card">
+
+            <h2>📍 Delivery Address</h2>
+
+            <p id="profile-address">
+                No address added.
+            </p>
+
+        </div>
+
+        <button class="back-btn" onclick="goHome()">
+            ← Back to Home
+        </button>
+
+    </div>
+
+    <script src="profile.js"></script>
+
+</body>
+</html>

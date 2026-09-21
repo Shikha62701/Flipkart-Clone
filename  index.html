@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flipkart Clone</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Flipkart
+        </div>
+
+
+        <!-- Delivery Address -->
+
+        <div class="delivery-box" onclick="openAddressPopup()">
+
+            <span class="location-icon">
+                📍
+            </span>
+
+            <div>
+                <small>Deliver to</small>
+
+                <strong id="top-address-text">
+                    Add Address
+                </strong>
+            </div>
+
+            <span class="arrow">
+                ⌄
+            </span>
+
+        </div>
+
+
+        <!-- Search -->
+
+        <input
+            type="text"
+            id="search-box"
+            class="search-box"
+            placeholder="Search for products, brands and more"
+        >
+
+
+        <!-- Login -->
+
+        <button
+            id="login-btn"
+            class="login-btn"
+            onclick="openLogin()"
+        >
+            Login
+        </button>
+
+
+        <!-- Username -->
+
+        <span id="user-name"></span>
+        <button class="profile-btn" onclick="openProfile()">
+    👤 Profile
+</button>
+
+
+        <!-- Logout -->
+
+        <button
+            id="logout-btn"
+            class="logout-btn"
+            onclick="logout()"
+            style="display: none;"
+        >
+            Logout
+        </button>
+
+
+        <!-- Cart -->
+
+       <div class="cart" onclick="openCart()">
+    🛒 Cart
+</div>
+
+    </nav>
+
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories">
+
+        <div>📱 Mobiles</div>
+
+        <div>👕 Fashion</div>
+
+        <div>💻 Electronics</div>
+
+        <div>🏠 Home</div>
+
+        <div>📺 Appliances</div>
+
+        <div>✈️ Travel</div>
+
+        <div>🛒 Grocery</div>
+
+    </section>
+
+
+
+    <!-- ================= BANNER ================= -->
+
+    <section class="banner">
+
+        <h1>
+            Welcome to Flipkart Clone
+        </h1>
+
+        <p>
+            Big Shopping Days • Best Deals
+        </p>
+
+        <button>
+            Shop Now
+        </button>
+
+    </section>
+
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="products">
+
+        <h2>
+            Best Deals
+        </h2>
+
+
+        <div class="product-container">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div class="product-card">
+
+                <img
+                    src="images/smartphone copy.jpg"
+                    alt="Smartphone"
+                >
+
+                <h3>
+                    Smartphone
+                </h3>
+
+                <p>
+                    ₹14,999
+                </p>
+
+                <button
+                    onclick="addToCart('Smartphone', 14999)"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product-card">
+
+                <img
+                    src="images/laptop copy.jpg"
+                    alt="Laptop"
+                >
+
+                <h3>
+                    Laptop
+                </h3>
+
+                <p>
+                    ₹49,999
+                </p>
+
+                <button
+                    onclick="addToCart('Laptop', 49999)"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+
+            <!-- PRODUCT 3 -->
+
+            <div class="product-card">
+
+                <img
+                    src="images/headphones copy.jpg"
+                    alt="Headphones"
+                >
+
+                <h3>
+                    Headphones
+                </h3>
+
+                <p>
+                    ₹1,499
+                </p>
+
+                <button
+                    onclick="addToCart('Headphones', 1499)"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+
+            <!-- PRODUCT 4 -->
+
+            <div class="product-card">
+
+                <img
+                    src="images/smartwatch copy.jpg"
+                    alt="Smart Watch"
+                >
+
+                <h3>
+                    Smart Watch
+                </h3>
+
+                <p>
+                    ₹2,999
+                </p>
+
+                <button
+                    onclick="addToCart('Smart Watch', 2999)"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+
+            <!-- PRODUCT 5 -->
+
+            <div class="product-card">
+
+                <img
+                    src="images/shoes copy.jpg"
+                    alt="Running Shoes"
+                >
+
+                <h3>
+                    Running Shoes
+                </h3>
+
+                <p>
+                    ₹1,999
+                </p>
+
+                <button
+                    onclick="addToCart('Running Shoes', 1999)"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+
+            <!-- PRODUCT 6 -->
+
+            <div class="product-card">
+
+                <img
+                    src="images/backpack copy.jpg"
+                    alt="Backpack"
+                >
+
+                <h3>
+                    Backpack
+                </h3>
+
+                <p>
+                    ₹899
+                </p>
+
+                <button
+                    onclick="addToCart('Backpack', 899)"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CART ================= -->
+
+    
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+
+        <div>
+
+            <h3>
+                About
+            </h3>
+
+            <p>
+                Flipkart Clone is a beginner
+                e-commerce project.
+            </p>
+
+        </div>
+
+
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <p>
+                Home
+            </p>
+
+            <p>
+                Products
+            </p>
+
+            <p>
+                Cart
+            </p>
+
+        </div>
+
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                Email: support@example.com
+            </p>
+
+            <p>
+                Phone: +91 9876543210
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ================= COPYRIGHT ================= -->
+
+    <div class="copyright">
+
+        <p>
+            © 2026 Flipkart Clone | Created by Shikha
+        </p>
+
+    </div>
+
+
+
+    <!-- ================= LOGIN POPUP ================= -->
+
+    <div
+        id="login-popup"
+        class="login-popup"
+    >
+
+        <div class="login-box">
+
+
+            <!-- CLOSE -->
+
+            <span
+                class="close"
+                onclick="closeLogin()"
+            >
+                &times;
+            </span>
+
+
+
+            <!-- LOGIN FORM -->
+
+            <div id="login-form">
+
+                <h2>
+                    Login
+                </h2>
+
+
+                <input
+                    type="email"
+                    id="login-email"
+                    placeholder="Enter Email"
+                >
+
+
+                <input
+                    type="password"
+                    id="login-password"
+                    placeholder="Enter Password"
+                >
+
+
+                <button
+                    onclick="login()"
+                >
+                    Login
+                </button>
+
+
+                <p id="login-message"></p>
+
+
+                <p>
+
+                    Don't have an account?
+
+                    <a
+                        href="#"
+                        onclick="showRegister()"
+                    >
+                        Create Account
+                    </a>
+
+                </p>
+
+            </div>
+
+
+
+            <!-- REGISTER FORM -->
+
+            <div
+                id="register-form"
+                style="display: none;"
+            >
+
+                <h2>
+                    Create Account
+                </h2>
+
+
+                <input
+                    type="text"
+                    id="register-name"
+                    placeholder="Enter Name"
+                >
+
+
+                <input
+                    type="email"
+                    id="register-email"
+                    placeholder="Enter Email"
+                >
+
+
+                <input
+                    type="password"
+                    id="register-password"
+                    placeholder="Create Password"
+                >
+
+
+                <button
+                    onclick="register()"
+                >
+                    Create Account
+                </button>
+
+
+                <p id="register-message"></p>
+
+
+                <p>
+
+                    Already have an account?
+
+                    <a
+                        href="#"
+                        onclick="showLogin()"
+                    >
+                        Login
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= ADDRESS POPUP ================= -->
+
+    <div
+        id="address-popup"
+        class="address-popup"
+    >
+
+        <div class="address-box">
+
+
+            <!-- CLOSE -->
+
+            <span
+                class="address-close"
+                onclick="closeAddressPopup()"
+            >
+                &times;
+            </span>
+
+
+            <h2>
+                📍 Add Delivery Address
+            </h2>
+
+
+            <input
+                type="text"
+                id="address-name"
+                placeholder="Full Name"
+            >
+
+
+            <input
+                type="tel"
+                id="address-phone"
+                placeholder="Mobile Number"
+            >
+
+
+            <input
+                type="text"
+                id="address-house"
+                placeholder="House / Flat / Building"
+            >
+
+
+            <input
+                type="text"
+                id="address-area"
+                placeholder="Area / Street"
+            >
+
+
+            <div class="address-row">
+
+                <input
+                    type="text"
+                    id="address-city"
+                    placeholder="City"
+                >
+
+
+                <input
+                    type="text"
+                    id="address-state"
+                    placeholder="State"
+                >
+
+            </div>
+
+
+            <input
+                type="text"
+                id="address-pincode"
+                placeholder="PIN Code"
+            >
+
+
+            <button
+                onclick="saveTopAddress()"
+            >
+                Save Address
+            </button>
+
+
+            <p id="address-message"></p>
+
+        </div>
+
+    </div>
+
+    <!-- Cart Popup -->
+    <div id="cart-popup" class="cart-popup">
+        <div class="cart-popup-box">
+
+            <span class="cart-close" onclick="closeCart()">&times;</span>
+
+            <h2>🛒 My Cart</h2>
+
+            <div id="popup-cart-items">
+                <p>Your cart is empty.</p>
+            </div>
+
+            <h3 id="popup-cart-total">Total: ₹0</h3>
+
+            <button onclick="checkout()" class="checkout-btn">
+                Checkout
+            </button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
